@@ -1,0 +1,20 @@
+body{
+    background-image: url("https://files.123freevectors.com/wp-content/original/130949-abstract-blue-and-white-polygon-background-template-design.jpg");
+}
+
+.contact {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-width: 20px;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact p {
+    margin-bottom: 20px;
+}
