@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navi Bar</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background-image: url(https://img.freepik.com/free-photo/abstract-blur-empty-green-gradient-studio-well-use-as-background-website-template-frame-business-report_1258-71453.jpg); /* Replace with actual image path */
+            background-size: cover;
+        }
+        nav {
+            background-color: gray;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 10%; /* Adjust padding as per your design */
+        }
+        h2 {
+            /* text-align: left; */ /* Redundant, since it's already left-aligned by default */
+        }
+        img {
+            height: 50px;
+            float: left;
+            border-radius: 15px;
+            padding-right: 2px;
+        }
+        img:hover{
+            opacity: 0.5;
+        }
+        .logo {
+            color: rgb(66, 60, 240);
+            font-size: 30px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            padding-left: 300px;
+        }
+        nav ul li {
+            padding: 10px 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: red;
+            transition: .5s;
+        }
+        button {
+            border: none;
+            background: red;
+            padding: 10px 30px;
+            border-radius: 30px;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer; /* Use pointer cursor for buttons */
+        }
+        button:hover {
+            color: aqua;
+            font-size: x-large;
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <div class="logo">
+                <img src="data:image/jpeg;base64,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w5igZPhzrsduI8JruVrhyELn/Gst4zh0Rhr4ppKcEOAadvGCOBZa5Z7FhcBzBVZWkL8Pe6Nx3OY5vcuHM5h4/iEG5fzR9s/KVozFjsOXYHz4i6zG7gPCc7ka0cpK5p+NUnbDs/Uj2u122rc6mtq6luN7eVfPHcwVWaZA/EHmRw3NY0dy0czYxw/HpQbNlzD5tJeJvmxId5a5skvitjHzcA6+HVrlVXM2kOhy2C0yCWUCwiiIJHMHO+Swde/oUewXLeM4jEIaCKaOnJLiHHYRkniX3sX+1bvlvQuyKzswz6547OK7WeWQ7z5AEGp4hi2J6T5tlSMtECDs2kiFg5HSycp6/IFWciZDgymzWHfKhws+Ui27xI2+C32nl5lsmGYbDhcYjw6NscY4Na2w6+k9K9qAiIgIiICIiAiIgIiICIiAiIgIiICIiAvhPSsqPn2Nd9ZoP4r7ogx/aOl49iw/8DP0XpgpWU/zDGt+q0D8F90QEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERB//9k=" alt="Logo"> <!-- Replace with actual logo image -->
+                <h2>Vikram K</h2> <!-- Replace with actual logo text -->
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Contact</a></li>
+            </ul>
+            <button>Get Started</button>
+        </nav>
+    </div>
+</body>
+</html>
