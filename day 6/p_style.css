@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    background-color: #6e44d8;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  
+}
+.a{
+    font-family: Arial, Helvetica, sans-serif;
+     color: aquamarine;
+
+    font-size: xx-large;
+    transition: 2s;
+    text-shadow: #0093E9;
+}
+.a:hover{
+    
+
+    color: rgb(215, 105, 105);
+    transition: 2s;
+    
+}
+button{
+    margin:170px;
+    padding: 30px;
+    background-color: rgb(37, 3, 41);
+    border-radius: 50px;
+    font-size:x-large;
+
+
+}
+button:hover{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aquamarine;
+    font-size: xx-large;
+    transition: 2s;
+    box-shadow: #80D0C7;
+
+}
