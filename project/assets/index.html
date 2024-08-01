@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <!-- CSS file -->
+    <link rel="stylesheet" href="pstyle.css">
+
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Header-section start -->
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="logo.png" alt="logo">
+        </a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Offers</a>
+            <a href="#service">Menu</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#blogs">Blogs</a>
+
+        </nav>
+        <div class="icons" style="align-items: flex-end;">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="Search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+        <div class="login">
+            <button class="login-button">login</button>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+        
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="image/combo4.jpg" alt="cart item">
+                <div class="content">
+                    <h3>Cart item 01</h3>
+                    <div class="price">$15.99</div>
+                </div>
+            </div>
+            
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="image/combo3.jpg" alt="cart item">
+                <div class="content">
+                    <h3>Cart item 02</h3>
+                    <div class="price">$15.99</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="image/combo4.jpg" alt="cart item">
+                <div class="content">
+                    <h3>Cart item 03</h3>
+                    <div class="price">$15.99</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="image/combo6.jpg" alt="cart item">
+                <div class="content">
+                    <h3>Cart item 04</h3>
+                    <div class="price">$15.99</div>
+                </div>
+            </div>
+            <a href="#" class="btn">Check Out</a>
+        </div>
+    </header>
+    <!-- Header-section end -->
+
+    <!-- home section start -->
+     <section class="home" id="home">
+        <div class="content">
+            <h3>One bite at a time, savor the moment.</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae eius explicabo, qui adipisci ab perspiciatis beatae perferendis voluptatum earum optio, quisquam dicta necessitatibus illum illo eum mollitia debitis facilis ducimus!</p>
+            <a href="#" class="btn">get your now</a>
+        </div>
+     </section>
+     <!-- home section end -->
+
+     <!-- about section start -->
+     <section class="about" id="about">
+        <h1 class="heading"><span>about</span> us</h1>
+        <div class="row">
+            <div class="video">
+                <video id="aboutVideo" width="100%" height="auto" autoplay muted loop>
+                    <source src="video/about1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="content">
+                <h3>Our Restaurant's Special Food</h3>
+                <p>Welcome to our restaurant, where we pride ourselves on offering a unique culinary experience. Our menu features a variety of special dishes crafted with the finest ingredients and a touch of innovation. Come and indulge in our exquisite flavors and exceptional service.</p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="playButton" class="btn"><i class="fas fa-play"></i></button>
+            <button id="pauseButton" class="btn"><i class="fas fa-pause"></i></button>
+            <button id="muteButton" class="btn"><i class="fas fa-volume-mute"></i></button>
+        </div>
+    </section>
+    
+    
+     <!-- menu section start -->
+
+     <section class="menu" id="menu">
+        <h1 class="heading">Combo <span>Offer</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="image/combo1.jpg" alt="">
+                <h3 >tasty and helthy</h3>
+                <h3>Paneer Puri</h3>
+                <div class="price">$15.99 <span>20.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div> 
+            <div class="box">
+                <img src="image/combo2.jpg" alt="">
+                <h3 >tasty and helthy</h3>
+                <h3>Burger King</h3>
+                <div class="price">$19.99 <span>27.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div> 
+            <div class="box">
+                <img src="image/combo3.jpg" alt="">
+                <h3 >tasty and helthy</h3>
+                <h3>Briyani</h3>
+                <div class="price">$15.99 <span>20.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div> 
+            <div class="box">
+                <img src="image/combo4.jpg" alt="">
+                <h3 >tasty and helthy</h3>
+                <h3>Veg meals</h3>
+                <div class="price">$15.99 <span>20.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div> 
+            <div class="box">
+                <img src="image/combo5.jpg" alt="">
+                <h3 >tasty and helthy</h3>
+                <h3>Burger King(Veg)</h3>
+                <div class="price">$15.99 <span>20.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div> 
+            <div class="box">
+                <img src="image/combo6.jpg" alt="">
+                <h3 >tasty and helthy</h3>
+                <h3>Pocket meals</h3>
+                <div class="price">$15.99 <span>20.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div> 
+            <div class="box">
+                <img src="image/combo7.jpg" alt="">
+                <h3 >tasty and helthy</h3>
+                <h3>Soup and Salad</h3>
+                <div class="price">$15.99 <span>20.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div> 
+            <div class="box">
+                <img src="image/combo8.jpg" alt="">
+                <h3 >tasty and helthy</h3>
+                <h3>Chowrasta Indian Cuisine</h3>
+                <div class="price">$15.99 <span>20.99</span></div>
+                <a href="#" class="btn">add to cart</a>
+            </div> 
+        </div>
+     </section>
+
+    <section class="service" id="service">
+        <div class="heading">Order<span> for </span> Delivery</div>
+        <div class="box-container">
+            <div class="box">
+                <div class="icon">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="cart01.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Chicken tandoori</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">25.99 <span>$50.99</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icon">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="image/combo7.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Veg soup</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">15.99 <span>$20.99</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icon">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="image/combo6.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Burger king</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">15.99 <span>$20.99</span></div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="menus" ><a href="menu_index.html" class="btn">menus</a></div>
+
+    </section>
+
+    <!-- review section start -->
+     <section class="review" id="review">
+        <div class="heading">customer's <span>review</span></div>
+        <div class="box-container">
+            <div class="box">
+                <img src="rev2.jpg" alt="" class="quote">
+                <p class="p1"> food Services</p>
+                    
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui earum maxime a cum nemo repellendus dolorum quas, deleniti officiis optio tempore sint ad nobis consequuntur sequi, cumque magnam aliquid expedita.</p>
+                <img src="rev5.jpg" alt="" class="user">
+                <h3>John deo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="rev1.jpg" alt="" class="quote">
+                <p class="p1">interier design</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui earum maxime a cum nemo repellendus dolorum quas, deleniti officiis optio tempore sint ad nobis consequuntur sequi, cumque magnam aliquid expedita.</p>
+                <img src="rev3.webp" alt="" class="user">
+                <h3>John deo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/combo8.jpg" alt="" class="quote">
+                <p class="p1">Foods tasty</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui earum maxime a cum nemo repellendus dolorum quas, deleniti officiis optio tempore sint ad nobis consequuntur sequi, cumque magnam aliquid expedita.</p>
+                <img src="rev4.webp" alt="" class="user">
+                <h3>John deo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- contact section start -->
+     <section class="contact" id="contact">
+        <h1 class="heading"><span>contact</span>us</h1>
+        <div class="row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6443651315685!2d80.24523047507795!3d13.058294487265025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52664274918da1%3A0xc2a4e4c0d45dfa71!2sTaj%20Coromandel%2C%20Chennai!5e0!3m2!1sen!2sin!4v1721128521407!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <form action="">
+                <h3>get in touch</h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="name">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="email">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <input type="number" placeholder="number">
+                </div>
+                <input type="submit" value="contact now" class="btn">
+            </form>
+        </div>
+     </section>
+
+    
+
+     <!-- footer section start -->
+
+     <section class="footer">
+        <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+    <div class="links">
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">Menu</a>
+        <a href="#">Service</a>
+        <a href="#">review</a>
+        <a href="#">contact us</a>
+        <a href="#">Blogs</a>
+    </div>
+    
+    <div class="credit">
+        created by <span>Team members</span> | all right reversed
+    </div>
+
+     </section>
+     
+    <script src="script.js"></script> 
+   
+</body>
+</html>

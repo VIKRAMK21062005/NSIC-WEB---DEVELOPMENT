@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="menu_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="logo.png" alt="logo">
+        </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Combo</a>
+            <a href="#service">Menu</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#blogs">Blogs</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+        <div class="search-form" id="search-form">
+            <input type="search" id="search-box" placeholder="Search menu...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="section-title">
+            <h2>Our Menu</h2>
+            <p>Explore our delicious menu items across different meals of the day.</p>
+        </div>
+        <div class="menu-grid" id="menu-items">
+            <div class="single-menu">
+                <img src="image/combo1.jpg" alt="Pancakes">
+                <div class="menu-content">
+                    <h5>Pancakes <span>$10</span></h5>
+                    <p>Fluffy and delicious pancakes with syrup.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="image/combo2.jpg" alt="Omelette">
+                <div class="menu-content">
+                    <h5>Omelette <span>$12</span></h5>
+                    <p>A hearty omelette with your choice of fillings.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="image/combo3.jpg" alt="Caesar Salad">
+                <div class="menu-content">
+                    <h5>Caesar Salad <span>$15</span></h5>
+                    <p>Classic Caesar salad with crispy croutons.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="image/combo4.jpg" alt="Grilled Cheese Sandwich">
+                <div class="menu-content">
+                    <h5>Grilled Cheese <span>$18</span></h5>
+                    <p>Cheesy grilled sandwich with a side of pickles.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="image/combo5.jpg" alt="Steak">
+                <div class="menu-content">
+                    <h5>Steak <span>$20</span></h5>
+                    <p>Juicy steak cooked to perfection.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="single-menu">
+                <img src="image/combo6.jpg" alt="Pasta">
+                <div class="menu-content">
+                    <h5>Pasta <span>$22</span></h5>
+                    <p>Delicious pasta with a rich tomato sauce.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <!-- More items -->
+        </div>
+    </div>
+
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <h4>Cart</h4>
+            <div class="cart-items" id="cart-items"></div>
+            <div class="cart-total">
+                Total: $<span id="cart-total">0</span>
+            </div>
+            <div class="cart-buttons">
+                <button id="clear-cart-btn">Clear All</button>
+                <button id="pay-now-btn">Pay Now</button>
+                <button id="close-cart-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let navbar = document.querySelector('.navbar');
+            let searchForm = document.querySelector('.search-form');
+            let cartModal = document.querySelector('#cart-modal');
+            let menuItems = document.querySelectorAll('.single-menu');
+            let searchBox = document.querySelector('#search-box');
+            let cartItemsContainer = document.querySelector('#cart-items');
+            let cartTotalElement = document.querySelector('#cart-total');
+            let closeCartBtn = document.querySelector('#close-cart-btn');
+            let clearCartBtn = document.querySelector('#clear-cart-btn');
+            let payNowBtn = document.querySelector('#pay-now-btn');
+
+            // Toggle navbar
+            document.querySelector('#menu-btn').onclick = () => {
+                navbar.classList.toggle('active');
+                searchForm.classList.remove('active');
+            }
+
+            // Toggle search form
+            document.querySelector('#search-btn').onclick = () => {
+                searchForm.classList.toggle('active');
+                navbar.classList.remove('active');
+            }
+
+            // Toggle cart modal
+            document.querySelector('#cart-btn').onclick = () => {
+                cartModal.classList.toggle('active');
+            }
+
+            // Close cart modal
+            closeCartBtn.onclick = () => {
+                cartModal.classList.remove('active');
+            }
+
+            // Search functionality
+            function updateMenuDisplay() {
+                let filterText = searchBox.value.toLowerCase();
+                menuItems.forEach(item => {
+                    let title = item.querySelector('.menu-content h5').textContent.toLowerCase();
+                    item.style.display = title.includes(filterText) ? "block" : "none";
+                });
+            }
+
+            searchBox.addEventListener('input', updateMenuDisplay);
+
+            // Add to cart functionality
+            let cartTotal = 0;
+
+            function saveCart() {
+                let cartItems = [];
+                document.querySelectorAll('.cart-item').forEach(item => {
+                    let title = item.querySelector('p').textContent;
+                    let price = parseFloat(title.split('- $')[1]);
+                    cartItems.push({ title, price });
+                });
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                localStorage.setItem('cartTotal', cartTotal.toFixed(2));
+            }
+
+            function loadCart() {
+                let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                cartTotal = parseFloat(localStorage.getItem('cartTotal')) || 0;
+                cartItems.forEach(item => {
+                    let cartItem = document.createElement('div');
+                    cartItem.classList.add('cart-item');
+                    cartItem.innerHTML = `
+                        <p>${item.title}</p>
+                        <button class="remove-btn">Remove</button>
+                    `;
+                    cartItemsContainer.appendChild(cartItem);
+
+                    cartItem.querySelector('.remove-btn').onclick = () => {
+                        cartItem.remove();
+                        cartTotal -= item.price;
+                        cartTotalElement.textContent = cartTotal.toFixed(2);
+                        saveCart();
+                    }
+                });
+                cartTotalElement.textContent = cartTotal.toFixed(2);
+            }
+
+            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                button.onclick = () => {
+                    let menuItem = button.closest('.single-menu');
+                    let title = menuItem.querySelector('.menu-content h5').textContent;
+                    let price = parseFloat(menuItem.querySelector('span').textContent.replace('$', ''));
+
+                    let cartItem = document.createElement('div');
+                    cartItem.classList.add('cart-item');
+                    cartItem.innerHTML = `
+                        <p>${title} - $${price.toFixed(2)}</p>
+                        <button class="remove-btn">Remove</button>
+                    `;
+                    cartItemsContainer.appendChild(cartItem);
+
+                    cartTotal += price;
+                    cartTotalElement.textContent = cartTotal.toFixed(2);
+                    saveCart();
+
+                    cartItem.querySelector('.remove-btn').onclick = () => {
+                        cartItem.remove();
+                        cartTotal -= price;
+                        cartTotalElement.textContent = cartTotal.toFixed(2);
+                        saveCart();
+                    }
+                }
+            });
+
+            // Clear cart functionality
+            clearCartBtn.onclick = () => {
+                cartItemsContainer.innerHTML = '';
+                cartTotal = 0;
+                cartTotalElement.textContent = '0.00';
+                localStorage.removeItem('cartItems');
+                localStorage.removeItem('cartTotal');
+            };
+
+            // Pay now functionality
+            payNowBtn.onclick = () => {
+                alert(`Thank you for your purchase! Your total is $${cartTotal.toFixed(2)}`);
+                cartItemsContainer.innerHTML = '';
+                cartTotal = 0;
+                cartTotalElement.textContent = '0.00';
+                localStorage.removeItem('cartItems');
+                localStorage.removeItem('cartTotal');
+                cartModal.classList.remove('active');
+            };
+
+            // Initial load of cart from localStorage
+            loadCart();
+
+            // Initial display update
+            updateMenuDisplay();
+        });
+    </script>
+</body>
+</html>
