@@ -20,7 +20,7 @@ Developed a **Restaurant Management System** using **HTML, CSS, and JavaScript**
 ### 📥 Clone the Repository
 After forking, clone the project to your local system:
 ```bash
- git clone https://github.com/YOUR-USERNAME/restaurant-management-system.git
+ git clone https:(https://github.com/VIKRAMK21062005/NSIC-WEB---DEVELOPMENT/tree/main/project/assets)
 ```
 
 ### 🛠️ Run the System
@@ -37,7 +37,7 @@ You can deploy your project using GitHub Pages:
 1. Push the repository to GitHub.
 2. Go to **Settings** → **Pages**.
 3. Under **Branch**, select `main` and click **Save**.
-4. Your site will be available at: `https://your-username.github.io/restaurant-management-system/`
+4. Your site will be available at: `https://VIKRAMK21062005/restaurant-management-system/`
 
 ---
 
